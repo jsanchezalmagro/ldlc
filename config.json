@@ -1,0 +1,49 @@
+{
+  "sourcer" : {
+    "internal": 1,
+    "number_bit": 4096,
+    "type" : "rdn",
+    "seed" : 0,
+    "external": "signal_in.txt",
+    "tofile" : 1,
+    "tofilename_bit": "./sim/seq102_python_tx/result/signal_bit_br-1071.txt",
+    "tofilename_word": "./sim/seq102_python_tx/result/signal_word.txt",
+    "extra" : {"0": 45, "1": 12}
+  },
+  "conv_enc" : {
+    "enable": 1,
+    "init" : 0,
+    "tofile" : 1,
+    "tofilename": "./sim/seq102_python_tx/result/conv_enc_out_br-1071.txt"
+  },
+  "interleaver" : {
+    "enable": 1,
+    "mode" : "4096B",
+    "tofile" : 1,
+    "tofilename": "./sim/seq102_python_tx/result/interleaver_out_br-1071.txt"
+  },
+  "mapper" : {
+    "enable": 1,
+    "mode" : "qpsk",
+    "external": "./sim/seq102_python_tx/result/mapper_source_br-1071.txt",
+    "n_word": 16,
+    "n_frac": 14,
+    "amplitude" : 1.0,
+    "tofile" : 1,
+    "tofilename": "./sim/seq102_python_tx/result/mapper_out_br-1071.txt"
+  },
+  "pulse_shaping" : {
+    "enable": 1,
+    "mode" : 8,
+    "tofile" : 1,
+    "tofilename": "./sim/seq102_python_tx/result/mapper_out_br-1071.txt",
+    "filter":     "./sim/seq102_python_tx/stimulus/filters_wb.json"
+  },
+  "resampling" : {
+    "enable": 1,
+    "fsout"  : 125e6,
+    "fsin"   :85.68e6,
+    "tofile" : 1,
+    "tofilename": "./sim/seq102_python_tx/result/resampling_out_br-1071.txt"
+  }
+}
